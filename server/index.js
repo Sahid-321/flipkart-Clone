@@ -1,6 +1,7 @@
 import express from 'express';
 import Connection from './database/db.js';
-import dotenv from "dotenv"
+import dotenv from "dotenv";
+import Default from './default.js';
 const app = express();
 const PORT = 8000;
 
@@ -14,3 +15,5 @@ app.listen(PORT, ()=>{
     console.log(`server runnig at port ${PORT} hello`);
 }
 )
+
+Default();
