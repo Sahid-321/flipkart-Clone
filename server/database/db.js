@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
-export const Connection = async ()=>{
-    const URL = 'mongodb+srv://user:sahidjamal@ecommerce.qxk5j1r.mongodb.net/?retryWrites=true&w=majority';
+export const Connection = async (username, password)=>{
+    const URL = `mongodb+srv://${username}:${password}@ecommerce.qxk5j1r.mongodb.net/?retryWrites=true&w=majority`;
     try {
       await  mongoose.connect(URL, {useUnifiedTopology:true, useNewUrlParser:true})
         console.log("connection sucessful");
